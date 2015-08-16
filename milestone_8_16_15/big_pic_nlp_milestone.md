@@ -3,6 +3,7 @@
 Here is the big picture of the project’s milestone section.
 
 (1) *simple_fe.py* works on 
+
 train.txt, dev.txt:
 
             @paulwalk	O
@@ -45,9 +46,7 @@ train.txt, dev.txt:
       
 (2) *crfsuite learn -m my model train.feats -> mymodel*
 
-(3) *crfsuite tag -m mymodel dev.feats -> pretags*
-
-e.g.
+(3) *crfsuite tag -m mymodel dev.feats -> pretags* 
 
             O
             O
