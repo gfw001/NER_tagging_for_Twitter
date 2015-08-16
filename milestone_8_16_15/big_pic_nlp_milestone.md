@@ -1,6 +1,4 @@
-# Big Picture 
-
-Here is the big picture of the project’s milestone section.
+# Big Picture of milestone
 
 (1) *simple_fe.py* works on 
 
@@ -60,12 +58,12 @@ train.txt, dev.txt:
             O
 
 (4) evaluate pretags against the gold standard tags of the devset.
-<pre><code>
+<code>
 python tageval.py dev.txt pretags
 -> Span-level NER evaluation
    F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
    (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)
-</code></pre>
+</code>
 DATA SHAPE CHANGED
 <pre><code>
 spans = convert_bio_to_spans(["B","I","B"])
@@ -73,7 +71,6 @@ spans = convert_bio_to_spans(["B","I","B"])
 </code></pre>
 <pre><code>
 def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
-
     """a list of (goldtags,predtags) pairs.  goldtags and predtags are both lists of strings, of the same length."""
     num_sent = 0
     num_tokens= 0
@@ -114,7 +111,6 @@ def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
 OUTPUTS OF convert_bio_to_spans(bio_sequence)
 <pre><code>
 def test_bio_conversion():
-
     spans = convert_bio_to_spans(["B"])
     assert spans==[("",0,1)]
     spans = convert_bio_to_spans(["B","I"])
