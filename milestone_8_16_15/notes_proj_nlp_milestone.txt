@@ -2,30 +2,30 @@
 
 (1) simple_fe.py
 1. 
-¡°¡±¡±strip & split¡°¡±¡±
+â€œâ€â€strip & splitâ€œâ€â€
 ipaddr = "10.122.19.10"
 print(ipaddr.strip())
-¡°¡±¡±
+â€œâ€â€
 outputs: 10.122.19.10
-¡°¡±¡±
+â€œâ€â€
 ipaddr = "10.122.19.10"
 print(ipaddr.split())
-¡°¡±¡±
-outputs: [¡¯10.122.19.10']
-¡°¡±¡±
+â€œâ€â€
+outputs: [â€™10.122.19.10']
+â€œâ€â€
 ipaddr = "10.122.19.10"
 print(ipaddr.split('.'))
-¡°¡±¡±
+â€œâ€â€
 ['10', '122', '19', '10']
-¡°¡±¡±
+â€œâ€â€
 ipaddr = "10.122.19.10"
 print(ipaddr.strip().split('.'))
-¡°¡±¡±
+â€œâ€â€
 ['10', '122', '19', '10']
-¡°¡±¡±
+â€œâ€â€
 
 2.
-¡°¡±¡±method1¡°¡±¡±
+â€œâ€â€method1â€œâ€â€
 def read_file(filename):
     r"""Assume the file is the format
     word \t tag
@@ -47,28 +47,28 @@ def read_file(filename):
     return ret
 
 print(read_file("test.txt"))
-¡°¡±¡±outputs:
-[(['@paulwalk', 'It', "'s", 'the'], ['O', 'O', 'O', 'O']), (['From', 'Green', 'Newsfeed'], ['O', 'O', 'O']), (['Pxleyes', 'Top', '50', 'Photography', '#photography'], ['B', 'O', 'O', 'O', 'O']), (['today', 'is'], ['O', 'O']), (['party', 'party', '.', '&lt;', '3'], ['O', 'O', 'O', 'O', 'O'])]¡°¡±¡±
+â€œâ€â€outputs:
+[(['@paulwalk', 'It', "'s", 'the'], ['O', 'O', 'O', 'O']), (['From', 'Green', 'Newsfeed'], ['O', 'O', 'O']), (['Pxleyes', 'Top', '50', 'Photography', '#photography'], ['B', 'O', 'O', 'O', 'O']), (['today', 'is'], ['O', 'O']), (['party', 'party', '.', '&lt;', '3'], ['O', 'O', 'O', 'O', 'O'])]â€œâ€â€
 
 3.
 string.replace(s, old, new[, maxreplace])
 Return a copy of string s with all occurrences of substring old replaced by new. If the optional argument maxreplace is given, the first maxreplace occurrences are replaced.
 
 4.
-¡°¡±¡±%s %d outputs¡°¡±¡±
+â€œâ€â€%s %d outputsâ€œâ€â€
 ("word=%s" % w)
-¡°¡±¡±
+â€œâ€â€
 outputs:
 'word=p'
-¡°¡±¡±
-%s,±íÊ¾¸ñ»¯Ê½Ò»¸ö¶ÔÏóÎª×Ö·û
-%d,ÕûÊý
+â€œâ€â€
+%s,è¡¨ç¤ºæ ¼åŒ–å¼ä¸€ä¸ªå¯¹è±¡ä¸ºå­—ç¬¦
+%d,æ•´æ•°
 "Hello, %s" % "zhang3"
 >>> "Hello, zhang3"
 "%s:%d" % ("ab",3)
 >>> "ab:3"
 "%d" % 33 
->>> ¡±33"
+>>> â€33"
 
 5.
 def read_file(filename):
@@ -112,14 +112,14 @@ for tokens,goldtags in sents:
         print ("%s\t%s" % (goldtags[t], feats_tabsep))
     """
     print(feats)
-¡°¡±¡±
+â€œâ€â€
 outputs:
 [{'word=@paulwalk'}, {'word=It'}, {"word='s"}, {'word=the'}]
 [{'word=From'}, {'word=Green'}, {'word=Newsfeed'}]
 [{'word=Pxleyes'}, {'word=Top'}, {'word=50'}, {'word=Photography'}, {'word=#photography'}]
 [{'word=today'}, {'word=is'}]
 [{'word=party'}, {'word=party'}, {'word=.'}, {'word=&lt;'}, {'word=3'}]
-¡°¡±¡±
+â€œâ€â€
 
 def extract_features_for_sentence1(tokens):
     N = len(tokens)
@@ -130,9 +130,9 @@ def extract_features_for_sentence1(tokens):
 
 tokens = ['party', 'party', '.', '&lt;', '3']
 print(extract_features_for_sentence1(tokens))
-¡°¡±¡°
+â€œâ€â€œ
 outputs: [set(['word=party']), set(['word=party']), set(['word=.']), set(['word=&lt;']), set(['word=3'])]
-¡±¡°¡±
+â€â€œâ€
 
 6.
 sents = read_file("test.txt")
@@ -141,7 +141,7 @@ for tokens,goldtags in sents:
     for t in range(len(tokens)):
         feats_tabsep = "\t".join(feats[t])
         print ("%s\t%s" % (goldtags[t], feats_tabsep))
-¡°¡±¡±
+â€œâ€â€
 outputs:
 O	word=@paulwalk
 O	word=It
@@ -162,7 +162,7 @@ O	word=party
 O	word=.
 O	word=&lt;
 O	word=3
-¡°¡±¡±
+â€œâ€â€
 
 (2) evaluation
 1.
@@ -176,7 +176,8 @@ A false negative is where the gold standard has a name, but your tagger did not 
 Precision is the ratio of true positives (tp) to all predicted positives (tp + fp). 
 Recall is the ratio of true positives to all actual positives (tp + fn).
 
-3.For NER, evaluating F1 is better than evaluating token accuracy, since the vast majority of tokens are not in a named entity.
+3.
+For NER, evaluating F1 is better than evaluating token accuracy, since the vast majority of tokens are not in a named entity.
 
 (3) tageval.py
 1.
@@ -185,15 +186,15 @@ You have to get the name's span (interval of token positions) exactly correct in
 
 2.
 https://docs.python.org/2/library/sys.html 
-script - ½Å±¾
+script - è„šæœ¬
 sys - System-specific parameters and functions
 This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available.
 
 sys.argv
 The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string '-c'. If no script name was passed to the Python interpreter, argv[0] is the empty string.
 To loop over the standard input, or the list of files given on the command line, see the fileinput module.
-ÔËÐÐmain£¬´ÓµÚ¶þ¸ö²ÎÊý¿ªÊ¼×÷ÎªmainµÄ²ÎÊý´«Èë£¬argvµÚÒ»¸ö²ÎÊýÊÇÄ¬ÈÏµÄ³ÌÐòµÄÃû×Ö£¬²»ÐèÒªÊäÈëµÄ
-/**********************************/
+è¿è¡Œmainï¼Œä»Žç¬¬äºŒä¸ªå‚æ•°å¼€å§‹ä½œä¸ºmainçš„å‚æ•°ä¼ å…¥ï¼Œargvç¬¬ä¸€ä¸ªå‚æ•°æ˜¯é»˜è®¤çš„ç¨‹åºçš„åå­—ï¼Œä¸éœ€è¦è¾“å…¥çš„
+
 import sys
 
 print "script name is", sys.argv[0]        
@@ -204,24 +205,24 @@ if len(sys.argv) > 1:
         print arg
 else:
     print "there are no arguments!"
-¡°¡±¡±
+â€œâ€â€
 outputs:
 script name is /Users/Eamon___/Documents/workspace/PythonLearn1/src/Test1/__init__.py
 there are no arguments!
-¡°¡±¡±
+â€œâ€â€
 sys.stdin
 sys.stdout
 sys.stderr
-File objects corresponding to the interpreter¡¯s standard input, output and error streams. stdin is used for all interpreter input except for scripts but including calls to input() and raw_input(). stdout is used for the output of print and expression statements and for the prompts of input() and raw_input(). The interpreter¡¯s own prompts and (almost all of) its error messages go to stderr. stdout and stderr needn¡¯t be built-in file objects: any object is acceptable as long as it has a write() method that takes a string argument. (Changing these objects doesn¡¯t affect the standard I/O streams of processes executed by os.popen(), os.system() or the exec*() family of functions in the os module.)
+File objects corresponding to the interpreterâ€™s standard input, output and error streams. stdin is used for all interpreter input except for scripts but including calls to input() and raw_input(). stdout is used for the output of print and expression statements and for the prompts of input() and raw_input(). The interpreterâ€™s own prompts and (almost all of) its error messages go to stderr. stdout and stderr neednâ€™t be built-in file objects: any object is acceptable as long as it has a write() method that takes a string argument. (Changing these objects doesnâ€™t affect the standard I/O streams of processes executed by os.popen(), os.system() or the exec*() family of functions in the os module.)
 
-__future__ ¡ª Future statement definitions
+__future__ â€” Future statement definitions
 Source code: Lib/__future__.py
 __future__ is a real module, and serves three purposes:
-To avoid confusing existing tools that analyze import statements and expect to find the modules they¡¯re importing.
+To avoid confusing existing tools that analyze import statements and expect to find the modules theyâ€™re importing.
 To ensure that future statements run under releases prior to 2.1 at least yield runtime exceptions (the import of __future__ will fail, because there was no module of that name prior to 2.1).
-To document when incompatible changes were introduced, and when they will be ¡ª or were ¡ª made mandatory. This is a form of executable documentation, and can be inspected programmatically via importing __future__ and examining its contents.
+To document when incompatible changes were introduced, and when they will be â€” or were â€” made mandatory. This is a form of executable documentation, and can be inspected programmatically via importing __future__ and examining its contents.
 
-re ¡ª Regular expression operations
+re â€” Regular expression operations
 This module provides regular expression matching operations similar to those found in Perl. Both patterns and strings to be searched can be Unicode strings as well as 8-bit strings.
 
 3.
@@ -237,25 +238,25 @@ def check(spans):
         
 spans = ["Book", "OPT", "Lessons"]
 check(spans)
-¡°¡±¡±
+â€œâ€â€
 outputs: bad
-¡°¡±¡±
+â€œâ€â€
 
 def check(spans):
     if spans[1] and spans[1][0] in ("B","I","O"):
-    ¡°¡±¡±
-    or (spans[1]) and (spans[1][0] in (¡°B¡±,¡±I¡±,¡±O¡±)
+    â€œâ€â€
+    or (spans[1]) and (spans[1][0] in (â€œBâ€,â€Iâ€,â€Oâ€)
     or (spans[1] and spans[1][0]) in ("B","I","O"):
-    ¡°¡±¡±
+    â€œâ€â€
         print("good")
     else:
         print("bad")
         
 spans = ["Book", "OPT", "Lessons"]
 check(spans)
-¡°¡±¡±
+â€œâ€â€
 outputs: good
-¡°¡±¡±
+â€œâ€â€
 
 5.
 def check(bio_sequence):
@@ -281,9 +282,9 @@ def check(bio_sequence):
         
 bio_sequence = ["Boxing"]
 print(check(bio_sequence))
-¡°¡±¡±
+â€œâ€â€
 outputs: oxing
-¡°¡±¡±
+â€œâ€â€
 
 def check(bio_sequence):
     spans = []  
@@ -308,9 +309,9 @@ def check(bio_sequence):
         
 bio_sequence = ["Boxing"]
 print(check(bio_sequence))
-¡°¡±¡±
+â€œâ€â€
 outputs: [('oxing', 0, 1)]
-¡°¡±¡±
+â€œâ€â€
 
 def check(bio_sequence): 
     N = len(bio_sequence)
@@ -322,13 +323,13 @@ def check(bio_sequence):
         
 bio_sequence = ["I", "B", "O"]
 check(bio_sequence)
-¡°¡±¡°
+â€œâ€â€œ
 notes: The regular expression ^ means "find a start-of-line".
 outputs: 
 bad
 good
 good
-¡±¡°¡±
+â€â€œâ€
 
 (4) pred2kaggle.py
 python pred2kaggle.py pretags > for_kaggle
