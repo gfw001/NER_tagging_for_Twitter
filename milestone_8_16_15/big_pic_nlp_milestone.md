@@ -1,7 +1,7 @@
 # Big Picture of milestone
 
 
-1. `simple_fe.py` works on 
+(1) `simple_fe.py` works on 
 
 train.txt, dev.txt:
 
@@ -28,7 +28,7 @@ train.txt, dev.txt:
             O	word=evening
             O	word=.
       
-2. `crfsuite learn -m my model train.feats` -> `mymodel`
+(2) `crfsuite learn -m my model train.feats` -> `mymodel`
 
 (3) `crfsuite tag -m mymodel dev.feats` -> `pretags`
 
