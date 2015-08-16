@@ -52,8 +52,7 @@ outputs:
 F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
 (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)</code></pre>
 + Middle Process of Modeling
-<pre><code>spans = convert_bio_to_spans(["B","I","B"])
--> spans==[("",0,2), ("",2,3)]</code></pre>
+`spans = convert_bio_to_spans(["B","I","B"])` make spans become `[("",0,2), ("",2,3)]`
 <pre><code>def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
     """a list of (goldtags,predtags) pairs.  goldtags and predtags are both lists of strings, of the same length."""
     num_sent = 0
