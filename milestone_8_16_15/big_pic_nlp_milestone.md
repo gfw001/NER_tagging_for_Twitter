@@ -12,7 +12,9 @@ Like this:
             view	O
             from	O
       
--> `train.feats`, `dev.feats`. Like this:
+-> `train.feats`, `dev.feats`. 
+
+Like this:
 
             O	word=@paulwalk
             O	word=two
