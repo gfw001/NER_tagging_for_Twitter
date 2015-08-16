@@ -5,7 +5,7 @@
 ### 1. *simple_fe.py* works on train.txt, dev.txt
 
 * e.g.
-“`
+'
 @paulwalk	O
 
 It	O
@@ -17,7 +17,7 @@ the	O
 view	O
 
 from	O
-“`
+'
 -> train.feats, dev.feats
 
 e.g. (both)
