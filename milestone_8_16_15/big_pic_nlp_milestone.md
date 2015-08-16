@@ -7,15 +7,10 @@ Here is the big picture of the project’s milestone section.
 e.g.
 
             @paulwalk	O
-            
             It	O
-            
             's	O
-            
             the	O
-            
             view	O
-            
             from	O
       
 -> train.feats, dev.feats
@@ -23,54 +18,32 @@ e.g.
 e.g. (both)
 
             O	word=@paulwalk
-                        
             O	word=two
-                        
             O	word=weeks
-                        
             O	word=.
-                        
             B-facility	word=Empire
-                        
             I-facility	word=State
-                        
             I-facility	word=Building
-                        
             O	word==
-                        
             B-facility	word=ESB
-                        
             O	word=.
-                        
-                        
+            
             O	word=evening
-                        
             O	word=.
-                        
+            
             O	word=From
-                        
             O	word=Green
-                        
             O	word=Newsfeed
-                        
             O	word=_COLON_
-                        
-                        
+            
             B-other	word=AHFA
-                        
             O	word=extends
-                        
             O	word=deadline
-                        
             O	word=for
-                        
-                        
+            
             B-other	word=Sage
-                        
             I-other	word=Award
-                        
             O	word=5
-                        
             O	word=http_COLON_//tinyurl.com/24agj38
       
 2. *crfsuite learn -m my model train.feats -> mymodel*
@@ -80,37 +53,24 @@ e.g. (both)
 e.g.
 
             O
-                        
+            O
+            O
+            O
+            O
             O
                         
             O
-                        
             O
-            O
-                        
-            O
-            
-            O
-                        
-                        
-            O
-                        
-            O
-                        
             O
 
 4. evaluate pretags against the gold standard tags of the devset.
 
             python tageval.py dev.txt pretags
-                        
             -> Span-level NER evaluation
-                           
                F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
-               
                (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)
 
 e.g.
-                        
             spans = convert_bio_to_spans(["B","I","B"])
             
             -> spans==[("",0,2), ("",2,3)]
