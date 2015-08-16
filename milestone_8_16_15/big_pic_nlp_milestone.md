@@ -71,11 +71,10 @@ e.g.
                (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)
 
 e.g.
-
-            spans = convert_bio_to_spans(["B","I","B"])
-            
-            -> spans==[("",0,2), ("",2,3)]
-
+<pre><code>
+spans = convert_bio_to_spans(["B","I","B"])
+-> spans==[("",0,2), ("",2,3)]
+<pre><code>
 <pre><code>
 def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
 
