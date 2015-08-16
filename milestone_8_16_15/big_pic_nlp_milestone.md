@@ -5,12 +5,11 @@ Here is the big picture of the project’s milestone section.
 1. *simple_fe.py* works on train.txt, dev.txt
 
 e.g.
-      
-@paulwalk	O
-
-It	O
-
-'s	O
+            @paulwalk	O
+            
+            It	O
+            
+            's	O
 
 the	O
 
