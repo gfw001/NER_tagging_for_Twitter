@@ -60,11 +60,12 @@ train.txt, dev.txt:
 (4) evaluate pretags against the gold standard tags of the devset.
 
 `python tageval.py dev.txt pretags`
-
-            -> Span-level NER evaluation
-               F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
-               (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)
-
+outputs:
+<pre><code>
+Span-level NER evaluation
+F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
+(1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)
+</code></pre>
 DATA SHAPE CHANGED
 <pre><code>
 spans = convert_bio_to_spans(["B","I","B"])
