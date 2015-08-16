@@ -1,3 +1,3 @@
 # NER_tagging_for_Twitter
 
-Project for course CS 585 @UMassAmherst
+Project for course CS 585 Intro to NLP @UMassAmherst
