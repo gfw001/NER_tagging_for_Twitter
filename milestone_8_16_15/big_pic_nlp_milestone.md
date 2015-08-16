@@ -32,7 +32,7 @@ Like this:
       
 ###2. `crfsuite learn -m my model train.feats` generates `mymodel`
 
-###3 `crfsuite tag -m mymodel dev.feats` generates `pretags` 
+###3. `crfsuite tag -m mymodel dev.feats` generates `pretags` 
 
 Like this:
 
@@ -43,7 +43,7 @@ Like this:
                         
             O
 
-###4 evaluate pretags against the gold standard tags of the devset.
+###4. evaluate pretags against the gold standard tags of the devset.
 
 `python tageval.py dev.txt pretags`
 
