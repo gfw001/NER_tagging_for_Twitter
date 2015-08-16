@@ -27,21 +27,6 @@ train.txt, dev.txt:
             
             O	word=evening
             O	word=.
-            
-            O	word=From
-            O	word=Green
-            O	word=Newsfeed
-            O	word=_COLON_
-            
-            B-other	word=AHFA
-            O	word=extends
-            O	word=deadline
-            O	word=for
-            
-            B-other	word=Sage
-            I-other	word=Award
-            O	word=5
-            O	word=http_COLON_//tinyurl.com/24agj38
       
 (2) `crfsuite learn -m my model train.feats` -> `mymodel`
 
@@ -51,11 +36,7 @@ train.txt, dev.txt:
             O
             O
             O
-            O
-            O
                         
-            O
-            O
             O
 
 (4) evaluate pretags against the gold standard tags of the devset.
