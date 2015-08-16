@@ -12,7 +12,7 @@ Like this:
             view	O
             from	O
       
--> `train.feats`, `dev.feats`. 
+generates `train.feats`, `dev.feats`. 
 
 Like this:
 
@@ -30,9 +30,9 @@ Like this:
             O	word=evening
             O	word=.
       
-(2) `crfsuite learn -m my model train.feats` -> `mymodel`
+(2) `crfsuite learn -m my model train.feats` generates `mymodel`
 
-(3) `crfsuite tag -m mymodel dev.feats` -> `pretags` 
+(3) `crfsuite tag -m mymodel dev.feats` generates `pretags` 
 
 Like this:
 
