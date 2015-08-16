@@ -2,9 +2,8 @@
 
 Here is the big picture of the project’s milestone section.
 
-1. *simple_fe.py* works on train.txt, dev.txt
-
-e.g.
+(1) *simple_fe.py* works on 
+train.txt, dev.txt:
 
             @paulwalk	O
             It	O
@@ -13,9 +12,7 @@ e.g.
             view	O
             from	O
       
--> train.feats, dev.feats
-
-e.g. (both)
+-> train.feats, dev.feats:
 
             O	word=@paulwalk
             O	word=two
@@ -46,9 +43,9 @@ e.g. (both)
             O	word=5
             O	word=http_COLON_//tinyurl.com/24agj38
       
-2. *crfsuite learn -m my model train.feats -> mymodel*
+(2) *crfsuite learn -m my model train.feats -> mymodel*
 
-3. *crfsuite tag -m mymodel dev.feats -> pretags*
+(3) *crfsuite tag -m mymodel dev.feats -> pretags*
 
 e.g.
 
@@ -63,14 +60,14 @@ e.g.
             O
             O
 
-4. evaluate pretags against the gold standard tags of the devset.
-
-            python tageval.py dev.txt pretags
-            -> Span-level NER evaluation
-               F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
-               (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)
-
-e.g.
+(4) evaluate pretags against the gold standard tags of the devset.
+<pre><code>
+python tageval.py dev.txt pretags
+-> Span-level NER evaluation
+   F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
+   (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)
+</code></pre>
+DATA SHAPE CHANGED
 <pre><code>
 spans = convert_bio_to_spans(["B","I","B"])
 -> spans==[("",0,2), ("",2,3)]
@@ -115,7 +112,6 @@ def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
     print "F = {f1:.4f},  Prec = {prec:.4f} ({tp}/{tpfp}),  Rec = {rec:.4f} ({tp}/{tpfn})".format(tpfp=tp+fp, tpfn=tp+fn, **locals())
     print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())
 </code></pre>
-
 OUTPUTS OF convert_bio_to_spans(bio_sequence)
 <pre><code>
 def test_bio_conversion():
