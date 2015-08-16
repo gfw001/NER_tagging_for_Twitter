@@ -87,6 +87,7 @@ F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
     f1 = 2*prec*rec / (prec + rec)
     print "F = {f1:.4f},  Prec = {prec:.4f} ({tp}/{tpfp}),  Rec = {rec:.4f} ({tp}/{tpfn})".format(tpfp=tp+fp, tpfn=tp+fn, **locals())
     print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())</code></pre>
+    
 + OUTPUTS OF convert_bio_to_spans(bio_sequence)
 <pre><code>def test_bio_conversion():
     spans = convert_bio_to_spans(["B"])
