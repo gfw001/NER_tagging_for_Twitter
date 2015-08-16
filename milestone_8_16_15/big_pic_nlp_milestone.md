@@ -1,11 +1,11 @@
 # Big Picture 
 
-## Here is the big picture of the project’s milestone section.
+Here is the big picture of the project’s milestone section.
 
-### 1. *simple_fe.py* works on train.txt, dev.txt
+1. *simple_fe.py* works on train.txt, dev.txt
 
-* e.g.
-'
+e.g.
+      
 @paulwalk	O
 
 It	O
@@ -17,11 +17,11 @@ the	O
 view	O
 
 from	O
-'
+      
 -> train.feats, dev.feats
 
 e.g. (both)
-“`
+      
 O	word=@paulwalk
 
 O	word=two
@@ -71,11 +71,11 @@ I-other	word=Award
 O	word=5
 
 O	word=http_COLON_//tinyurl.com/24agj38
-“`
+      
 
-### 2. *crfsuite learn -m my model train.feats -> mymodel*
+2. *crfsuite learn -m my model train.feats -> mymodel*
 
-### 3. *crfsuite tag -m mymodel dev.feats -> pretags*
+3. *crfsuite tag -m mymodel dev.feats -> pretags*
 
 e.g.
 “`
@@ -101,7 +101,7 @@ O
 O
 “`
 
-### 4. evaluate pretags against the gold standard tags of the devset.
+4. evaluate pretags against the gold standard tags of the devset.
 “`
 python tageval.py dev.txt pretags
 -> Span-level NER evaluation
