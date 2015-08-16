@@ -1,9 +1,9 @@
 # Big Picture of milestone
 
 
-(1) `simple_fe.py` works on 
+(1) `simple_fe.py` works on train.txt, dev.txt. 
 
-train.txt, dev.txt. Like this:
+Like this:
 
             @paulwalk	O
             It	O
