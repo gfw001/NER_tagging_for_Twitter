@@ -71,9 +71,12 @@ e.g.
                (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)
 
 e.g.
+
             spans = convert_bio_to_spans(["B","I","B"])
             
             -> spans==[("",0,2), ("",2,3)]
+
+code:
 
 def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
 
@@ -114,9 +117,8 @@ def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
     print "F = {f1:.4f},  Prec = {prec:.4f} ({tp}/{tpfp}),  Rec = {rec:.4f} ({tp}/{tpfn})".format(tpfp=tp+fp, tpfn=tp+fn, **locals())
     print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())
 
-“””
-OUTPUTS OF convert_bio_to_spans(bio_sequence)
-“””
+
+OUTPUTS OF convert_bio_to_spans(bio_sequence):
 
 def test_bio_conversion():
 
