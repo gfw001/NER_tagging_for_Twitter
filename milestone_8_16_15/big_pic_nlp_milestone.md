@@ -1,9 +1,8 @@
-“””
 Here is a big picture of the project’s milestone section.
-“””
-“””
+
 1. simple_fe.py works on 
 train.txt, dev.txt
+
 e.g.
 @paulwalk	O
 It	O
@@ -13,6 +12,7 @@ view	O
 from	O
 
 -> train.feats, dev.feats
+
 e.g. (both)
 O	word=@paulwalk
 O	word=two
@@ -42,6 +42,7 @@ O	word=http_COLON_//tinyurl.com/24agj38
 
 2. crfsuite learn -m my model train.feats -> mymodel
 3. crfsuite tag -m mymodel dev.feats -> pretags
+
 e.g.
 O
 O
@@ -118,6 +119,7 @@ def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
 “””
 OUTPUTS OF convert_bio_to_spans(bio_sequence)
 “””
+
 def test_bio_conversion():
     spans = convert_bio_to_spans(["B"])
     assert spans==[("",0,1)]
