@@ -3,7 +3,7 @@
 
 (1) `simple_fe.py` works on 
 
-train.txt, dev.txt:
+train.txt, dev.txt. Like this:
 
             @paulwalk	O
             It	O
@@ -12,7 +12,7 @@ train.txt, dev.txt:
             view	O
             from	O
       
--> `train.feats`, `dev.feats`:
+-> `train.feats`, `dev.feats`. Like this:
 
             O	word=@paulwalk
             O	word=two
@@ -30,7 +30,9 @@ train.txt, dev.txt:
       
 (2) `crfsuite learn -m my model train.feats` -> `mymodel`
 
-(3) `crfsuite tag -m mymodel dev.feats` -> `pretags`
+(3) `crfsuite tag -m mymodel dev.feats` -> `pretags` 
+
+Like this:
 
             O
             O
@@ -47,7 +49,7 @@ outputs:
 <pre><code>Span-level NER evaluation
 F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
 (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)</code></pre>
-+ DATA SHAPE CHANGED
++ Middle Process of Modeling
 <pre><code>spans = convert_bio_to_spans(["B","I","B"])
 -> spans==[("",0,2), ("",2,3)]</code></pre>
 <pre><code>def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
@@ -88,7 +90,7 @@ F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
     print "F = {f1:.4f},  Prec = {prec:.4f} ({tp}/{tpfp}),  Rec = {rec:.4f} ({tp}/{tpfn})".format(tpfp=tp+fp, tpfn=tp+fn, **locals())
     print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())</code></pre>
     
-+ OUTPUTS OF convert_bio_to_spans(bio_sequence)
++ `convert_bio_to_spans(bio_sequence)`'s outputs like this:
 <pre><code>def test_bio_conversion():
     spans = convert_bio_to_spans(["B"])
     assert spans==[("",0,1)]
