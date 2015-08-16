@@ -48,12 +48,9 @@ outputs:
 F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
 (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)</code></pre>
 + DATA SHAPE CHANGED
-<pre><code>
-spans = convert_bio_to_spans(["B","I","B"])
--> spans==[("",0,2), ("",2,3)]
-</code></pre>
-<pre><code>
-def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
+<pre><code>spans = convert_bio_to_spans(["B","I","B"])
+-> spans==[("",0,2), ("",2,3)]</code></pre>
+<pre><code>def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
     """a list of (goldtags,predtags) pairs.  goldtags and predtags are both lists of strings, of the same length."""
     num_sent = 0
     num_tokens= 0
@@ -89,11 +86,9 @@ def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
     rec =  tp/(tp+fn) if (tp+fn)>0 else 0
     f1 = 2*prec*rec / (prec + rec)
     print "F = {f1:.4f},  Prec = {prec:.4f} ({tp}/{tpfp}),  Rec = {rec:.4f} ({tp}/{tpfn})".format(tpfp=tp+fp, tpfn=tp+fn, **locals())
-    print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())
-</code></pre>
+    print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())</code></pre>
 + OUTPUTS OF convert_bio_to_spans(bio_sequence)
-<pre><code>
-def test_bio_conversion():
+<pre><code>def test_bio_conversion():
     spans = convert_bio_to_spans(["B"])
     assert spans==[("",0,1)]
     spans = convert_bio_to_spans(["B","I"])
@@ -113,5 +108,4 @@ def test_bio_conversion():
     spans = convert_bio_to_spans(["I","I"])
     assert spans==[("",0,2)]
     spans = convert_bio_to_spans(["B-a","I-b"])
-    assert spans==[("a",0,1), ("b",1,2)]
-</code></pre>
+    assert spans==[("a",0,1), ("b",1,2)]</code></pre>
