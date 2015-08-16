@@ -76,8 +76,7 @@ e.g.
             
             -> spans==[("",0,2), ("",2,3)]
 
-code:
-
+<pre><code>
 def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
 
     """a list of (goldtags,predtags) pairs.  goldtags and predtags are both lists of strings, of the same length."""
@@ -116,10 +115,10 @@ def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
     f1 = 2*prec*rec / (prec + rec)
     print "F = {f1:.4f},  Prec = {prec:.4f} ({tp}/{tpfp}),  Rec = {rec:.4f} ({tp}/{tpfn})".format(tpfp=tp+fp, tpfn=tp+fn, **locals())
     print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())
+</code></pre>
 
-
-OUTPUTS OF convert_bio_to_spans(bio_sequence):
-
+OUTPUTS OF convert_bio_to_spans(bio_sequence)
+<pre><code>
 def test_bio_conversion():
 
     spans = convert_bio_to_spans(["B"])
@@ -142,3 +141,4 @@ def test_bio_conversion():
     assert spans==[("",0,2)]
     spans = convert_bio_to_spans(["B-a","I-b"])
     assert spans==[("a",0,1), ("b",1,2)]
+</code></pre>
