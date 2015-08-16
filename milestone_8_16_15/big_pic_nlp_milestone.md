@@ -74,7 +74,7 @@ e.g.
 <pre><code>
 spans = convert_bio_to_spans(["B","I","B"])
 -> spans==[("",0,2), ("",2,3)]
-<pre><code>
+</code></pre>
 <pre><code>
 def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
 
