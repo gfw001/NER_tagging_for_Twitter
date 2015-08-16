@@ -42,6 +42,7 @@ train.txt, dev.txt:
             O	word=5
             O	word=http_COLON_//tinyurl.com/24agj38
       
+
 2. `crfsuite learn -m my model train.feats` -> `mymodel`
 
 3. `crfsuite tag -m mymodel dev.feats` -> `pretags`
