@@ -4,7 +4,7 @@
 
 | `simple_fe.py` train.txt, dev.txt - - - - - -|
 
-v                                              |
+v                                               |
 
 `O word=It` train.feats    dev.feats - - - - - |
 
