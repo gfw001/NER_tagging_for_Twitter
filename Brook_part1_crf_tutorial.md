@@ -8,9 +8,7 @@ Quote from [CRFsuite tutorial] (http://www.chokkan.org/software/crfsuite/tutoria
 
 3. [Tagging] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489402)
 In project, evalution section put here. (use `tageval.py` instead)
-
-Apply the CRF model and tag chunk labels to the test data.
-Even though the test data has chunk labels annotated (for evaluation purposes), CRFsuite ignores the existing labels and outputs label sequences (one label per line) predicted by the model.
+When tagging, CRFsuite ignores labels in the input data or uses them for measuring the performance of predictions.
 
 4. [Dumping the model file] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489453)
 
