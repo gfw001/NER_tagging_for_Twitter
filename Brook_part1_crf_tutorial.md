@@ -12,8 +12,8 @@ Quote from [CRFsuite tutorial] (http://www.chokkan.org/software/crfsuite/tutoria
   
   When tagging, CRFsuite ignores labels in the input data or uses them for measuring the performance of predictions.
 
-4. [Dumping the model file] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489453)
+1'. [Dumping the model file] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489453)
 
-5. [Notes on writing attribute extractors] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489467)
+2'. [Notes on writing attribute extractors] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489467)
 
   In project, we use `simple_fe.py` instead of `chunking.py`.
