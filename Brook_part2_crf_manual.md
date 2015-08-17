@@ -10,3 +10,6 @@
         return s.replace(":","_COLON_").replace("\\", "_BACKSLASH_")</code></pre>
 
 2. [Installation] (http://www.chokkan.org/software/crfsuite/manual.html#id489766) (Linux and Windows)
+
+3. [Usage] (http://www.chokkan.org/software/crfsuite/manual.html#id490441) 
+
