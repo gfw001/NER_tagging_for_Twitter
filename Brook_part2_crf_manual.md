@@ -1,6 +1,6 @@
 # Brook part2: CRFsuite Documentation
 
-Quote from [CRFsuite manual] (http://www.chokkan.org/software/crfsuite/manual.html) to help me learn about rules of CRFsuite.
+##Quote from [CRFsuite manual] (http://www.chokkan.org/software/crfsuite/manual.html) to help me learn about rules of CRFsuite.
 
 1. [Format of training/tagging data] (http://www.chokkan.org/software/crfsuite/manual.html#id532502)
 
