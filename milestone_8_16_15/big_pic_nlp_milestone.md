@@ -4,23 +4,23 @@
 
 | `simple_fe.py` train.txt, dev.txt - - - - - -|
 
-v                                               |
+v                                              
 
 `O word=It` train.feats    dev.feats - - - - - |
 
-| `crfsuite learn -m my model train.feats`     |
+| `crfsuite learn -m my model train.feats`     
 
-V                                              |
+V                                              
 
 `mymodel` < - - - - - - - - - - - - - - - - - -|
 
-|`crfsuite tag -m mymodel dev.feats > predtags`|
+|`crfsuite tag -m mymodel dev.feats > predtags`
 
-V                                              |
+V                                              
 
 `O` pretags < - - - - - - - - - - - - - - - - -|
 
-|                                              |
+|                                              
 
 V - - - - - - - - - - - - - - - - - - - - - - -V
 
