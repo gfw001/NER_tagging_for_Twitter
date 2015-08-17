@@ -2,27 +2,27 @@
 
 `It  O`
 
-| `simple_fe.py` train.txt, dev.txt————————————|
+| `simple_fe.py` train.txt, dev.txt - - - - - -|
 
 v                                              |
 
-`O word=It` train.feats    dev.feats ————-|    |
+`O word=It` train.feats    dev.feats - - - - - |
 
-| `crfsuite learn -m my model train.feats`|    |
+| `crfsuite learn -m my model train.feats`     |
 
-V                                         |    |
+V                                              |
 
-`mymodel` <———————————————————————————————|    |
+`mymodel` < - - - - - - - - - - - - - - - - - -|
 
 |`crfsuite tag -m mymodel dev.feats > predtags`|
 
 V                                              |
 
-`O` pretags <——————————————————————————————————|
+`O` pretags < - - - - - - - - - - - - - - - - -|
 
 |                                              |
 
-V——————————————————————————————————————————————V
+V - - - - - - - - - - - - - - - - - - - - - - -V
 
                        | `convert_bio_to_spans(bio_sequence)`
                        
