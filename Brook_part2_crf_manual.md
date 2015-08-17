@@ -1,1 +1,1 @@
-# Brook part2: CRFsuite Manual
+# Brook part2: CRFsuite Documentation
