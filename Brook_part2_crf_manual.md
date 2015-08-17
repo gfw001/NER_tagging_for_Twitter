@@ -9,4 +9,4 @@ Quote from [CRFsuite manual] (http://www.chokkan.org/software/crfsuite/manual.ht
         """Clean a word string so it doesn't contain special crfsuite characters"""
         return s.replace(":","_COLON_").replace("\\", "_BACKSLASH_")</code></pre>
 
-2. [Installation] (http://www.chokkan.org/software/crfsuite/manual.html#id489766)
+2. [Installation] (http://www.chokkan.org/software/crfsuite/manual.html#id489766) (Linux and Windows)
