@@ -1,6 +1,6 @@
 # Brook part 1: CRFsuite Tutorial
 
-Quote from [CRFsuite tutorial] (http://www.chokkan.org/software/crfsuite/tutorial.html#id528076) help me to clear tasks, outputs and scripts used in this project.
+##Quote from [CRFsuite tutorial] (http://www.chokkan.org/software/crfsuite/tutorial.html#id528076) help me to clear tasks, outputs and scripts used in this project.
 
 1. [Feature (attribute) generation] (http://www.chokkan.org/software/crfsuite/tutorial.html#id485365)
 
