@@ -1,7 +1,7 @@
 # Big Picture of milestone
 
 
-###1. `simple_fe.py` works on train.txt, dev.txt. 
+######1. `simple_fe.py` works on train.txt, dev.txt. 
 
 Like this:
 
@@ -30,9 +30,9 @@ Like this:
             O	word=evening
             O	word=.
       
-###2. `crfsuite learn -m my model train.feats` generates `mymodel`
+######2. `crfsuite learn -m my model train.feats` generates `mymodel`
 
-###3. `crfsuite tag -m mymodel dev.feats` generates `pretags` 
+######3. `crfsuite tag -m mymodel dev.feats` generates `pretags` 
 
 Like this:
 
@@ -43,7 +43,7 @@ Like this:
                         
             O
 
-###4. evaluate pretags against the gold standard tags of the devset.
+######4. evaluate pretags against the gold standard tags of the devset.
 
 `python tageval.py dev.txt pretags`
 
