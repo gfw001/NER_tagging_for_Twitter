@@ -15,4 +15,5 @@ Quote from [CRFsuite tutorial] (http://www.chokkan.org/software/crfsuite/tutoria
 + [Dumping the model file] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489453)
 
 + [Notes on writing attribute extractors] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489467)
-In project, we use `simple_fe.py` instead of `chunking.py`.
+
+  In project, we use `simple_fe.py` instead of `chunking.py`.
