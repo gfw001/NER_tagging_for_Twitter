@@ -6,5 +6,5 @@ Quote from [CRFsuite manual] (http://www.chokkan.org/software/crfsuite/manual.ht
 
     `simple_fe.py` works on it.
     <pre><code>def clean_str(s):
-    """Clean a word string so it doesn't contain special crfsuite characters"""
-    return s.replace(":","_COLON_").replace("\\", "_BACKSLASH_")</code></pre>
+        """Clean a word string so it doesn't contain special crfsuite characters"""
+        return s.replace(":","_COLON_").replace("\\", "_BACKSLASH_")</code></pre>
