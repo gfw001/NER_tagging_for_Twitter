@@ -12,6 +12,7 @@ V                                              |
 “O” pretags                                    |
 |                                              |
 V- - - - - - - - - - - - - - - - - - - - - - - V
+                       | tageval.py
                        | convert_bio_to_spans(bio_sequence) 
                        V
     spans = convert_bio_to_spans(["B"])
