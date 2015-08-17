@@ -7,7 +7,6 @@ Quote from [CRFsuite tutorial] (http://www.chokkan.org/software/crfsuite/tutoria
 2. [Training] (http://www.chokkan.org/software/crfsuite/tutorial.html#id488968)
 
 3. [Tagging] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489402)
-
 In project, evalution section put here. (use tageval.py instead)
 
 4. [Dumping the model file] (http://www.chokkan.org/software/crfsuite/tutorial.html#id489453)
