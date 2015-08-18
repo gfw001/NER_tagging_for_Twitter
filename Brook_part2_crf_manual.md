@@ -13,3 +13,7 @@
 
 3. [Usage] (http://www.chokkan.org/software/crfsuite/manual.html#id490441) 
 
+    [Training] (http://www.chokkan.org/software/crfsuite/manual.html#id490773)
+    
+    Commands to train a CRF model from a training set, `crfsuite learn -m mymodel train.feats` used in this project.
+
