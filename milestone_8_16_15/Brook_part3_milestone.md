@@ -91,6 +91,44 @@
       * __Precision__ is the ratio of __true positives (tp)__ to all predicted positives (tp + fp). 
       * __Recall (sensitivity)__ is the ratio of __true positives (tp)__ to all actual positives (tp + fn).
       * __Specificity__ is the ratio of __true negative (tn)__ to (tn + fp)
+    - Code
+    <pre><code>def evaluate_taggings(goldseq_predseq_pairs, ignore_labels=False):
+    """a list of (goldtags,predtags) pairs.  goldtags and predtags are both lists of strings, of the same length."""
+    num_sent = 0
+    num_tokens= 0
+    num_goldspans = 0
+    num_predspans = 0
+
+    tp, fp, fn = 0,0,0
+
+    for goldseq,predseq in goldseq_predseq_pairs:
+        N = len(goldseq)
+        assert N==len(predseq)
+        num_sent += 1
+        num_tokens += N
+
+        if ignore_labels:
+            goldseq = kill_labels(goldseq)
+            predseq = kill_labels(predseq)
+
+        goldspans = convert_bio_to_spans(goldseq)
+        predspans = convert_bio_to_spans(predseq)
+
+        num_goldspans += len(goldspans)
+        num_predspans += len(predspans)
+
+        goldspans_set = set(goldspans)
+        predspans_set = set(predspans)
+
+        tp += len(goldspans_set & predspans_set)
+        fp += len(predspans_set - goldspans_set)
+        fn += len(goldspans_set - predspans_set)
+
+    prec = tp/(tp+fp) if (tp+fp)>0 else 0
+    rec =  tp/(tp+fn) if (tp+fn)>0 else 0
+    f1 = 2*prec*rec / (prec + rec)
+    print "F = {f1:.4f},  Prec = {prec:.4f} ({tp}/{tpfp}),  Rec = {rec:.4f} ({tp}/{tpfn})".format(tpfp=tp+fp, tpfn=tp+fn, **locals())
+    print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())</code></pre>
     
     
 
