@@ -78,3 +78,5 @@
             assert spans==[("",0,2)]
             spans = convert_bio_to_spans(["B-a","I-b"])
             assert spans==[("a",0,1), ("b",1,2)]</code></pre>
+      - __Sample__
+      <pre><code>spans == [("",0,3), ("",4,5)]</code></pre>
