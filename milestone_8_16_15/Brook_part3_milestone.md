@@ -48,6 +48,7 @@
 * Evaluation
   + Evaluate the pretags against the gold standard tags of the devset using `python tageval.py dev.txt predtags`
   + `tageval.py` used at this step, the evaluation script.
+  + __In current research, system typically get F-scores in the 0.6 range.__
   + __Outputs__
   <pre><code>Span-level NER evaluation
   F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
