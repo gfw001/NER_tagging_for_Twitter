@@ -130,5 +130,7 @@
             print "F = {f1:.4f},  Prec = {prec:.4f} ({tp}/{tpfp}),  Rec = {rec:.4f} ({tp}/{tpfn})".format(tpfp=tp+fp, tpfn=tp+fn, **locals())
             print "({num_sent} sentences, {num_tokens} tokens, {num_goldspans} gold spans, {num_predspans} predicted spans)".format(**locals())</code></pre>
     
-    
+## Report
 
+* Compare the tag predictions to the gold standard
+  + put them side-by-side using `paste predtags dev.txt`
