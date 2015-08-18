@@ -164,43 +164,72 @@
 * Look at `mymodel` using `crfsuite dump mymodel`.
   + __Sample__
   <pre><code>FILEHEADER = {
-  magic: lCRF
-  size: 525968
-  type: FOMC
-  version: 100
-  num_features: 0
-  num_labels: 3
-  num_attrs: 7072
-  off_features: 0x30
-  off_labels: 0x23618
-  off_attrs: 0x23E8A
-  off_labelrefs: 0x6B82C
-  off_attrrefs: 0x6B878
-}
+    magic: lCRF
+    size: 525968
+    type: FOMC
+    version: 100
+    num_features: 0
+    num_labels: 3
+    num_attrs: 7072
+    off_features: 0x30
+    off_labels: 0x23618
+    off_attrs: 0x23E8A
+    off_labelrefs: 0x6B82C
+    off_attrrefs: 0x6B878
+  }
 
-LABELS = {
-      0: O
-      1: B
-      2: I
-}
+  LABELS = {
+        0: O
+        1: B
+        2: I
+  }
 
-ATTRIBUTES = {
-      0: word=@paulwalk
-      1: word=It
-      2: word='s
-      3: word=the
-      4: word=view
-      5: word=from
-      6: word=where
-      7: word=I
-      8: word='m
-      9: word=living
-     10: word=for
-     11: word=two
-     12: word=weeks
-     13: word=.
-     14: word=Empire
-     15: word=State
-     16: word=Building
-     17: word==
-     18: word=ESB</code></pre>
+  ATTRIBUTES = {
+        0: word=@paulwalk
+        1: word=It
+        2: word='s
+        3: word=the
+        4: word=view
+        5: word=from
+        6: word=where
+        7: word=I
+        8: word='m
+        9: word=living
+       10: word=for
+       11: word=two
+       12: word=weeks
+       13: word=.
+       14: word=Empire
+       15: word=State
+       16: word=Building
+       17: word==
+       18: word=ESB
+       ...
+  }
+  
+  TRANSITIONS = {
+    (1) O --> O: 4.059304
+    (1) O --> B: 2.451315
+    (1) B --> O: 2.035927
+    (1) B --> B: -0.684482
+    (1) B --> I: 4.348084
+    (1) I --> O: 1.354929
+    (1) I --> B: -1.288914
+    (1) I --> I: 3.140151
+  }
+
+  STATE_FEATURES = {
+    ...
+    (0) word=Soulja --> B: 0.919394
+    (0) word=Boy --> O: -0.897372
+    (0) word=Boy --> I: 1.065956
+    (0) word=| --> O: 0.717401
+    (0) word=TheDeAndreWay --> O: 0.117317
+    (0) word=com --> O: 0.327298
+    (0) word=DeAndre --> O: -0.344690
+    (0) word=DeAndre --> I: 0.491510
+    (0) word=Way --> O: -0.529700
+    (0) word=Way --> I: 0.600220
+    (0) word=stores --> O: 0.113670
+    ...
+  }</code></pre>
