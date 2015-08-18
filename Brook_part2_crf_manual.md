@@ -10,6 +10,7 @@
         return s.replace(":","_COLON_").replace("\\", "_BACKSLASH_")</code></pre>
 
 2. [Installation] (http://www.chokkan.org/software/crfsuite/manual.html#id489766) (Linux and Windows)
+    + On Mac, we found [these instructions] (http://stackoverflow.com/questions/25838517/how-to-get-crfsuite-to-work-on-mac-os-x) worked (installing using Homebrew).
 
 3. [Usage] (http://www.chokkan.org/software/crfsuite/manual.html#id490441) 
     + [Training] (http://www.chokkan.org/software/crfsuite/manual.html#id490773)
