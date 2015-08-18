@@ -177,6 +177,7 @@
         off_labelrefs: 0x6B82C
         off_attrrefs: 0x6B878
       }
+
       LABELS = {
         0: O
         1: B
