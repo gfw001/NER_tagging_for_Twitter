@@ -13,8 +13,11 @@
 
 3. [Usage] (http://www.chokkan.org/software/crfsuite/manual.html#id490441) 
 
-    [Training] (http://www.chokkan.org/software/crfsuite/manual.html#id490773)
+    +[Training] (http://www.chokkan.org/software/crfsuite/manual.html#id490773)
+    
     *Commands to train a CRF model from a training set, `crfsuite learn -m mymodel train.feats` used in this project.
     * [Graphical models] (http://www.chokkan.org/software/crfsuite/manual.html#id491135) is 1d: 1st-order Markov CRF with dyad features
     * [Training algorithms] (http://www.chokkan.org/software/crfsuite/manual.html#id491233) is lbfgs: Limited-memory Broyden-Fletcher-Goldfarb-Shanno (L-BFGS) method
+    
+    +[Tagging]
 
