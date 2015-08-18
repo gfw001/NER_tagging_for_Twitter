@@ -82,13 +82,13 @@
     <pre><code>spans == [("",0,3), ("",4,5)]</code></pre>
 
   + __F-score__
-    <pre><code>__true positive (tp)__.
-    __true negative (tn)__. 
-    __false positive (fp)__ is where the tagger predicted a name, but there actually is no name in the gold standard.
-    __false negative (fn)__ is where the gold standard has a name, but your tagger did not predict a name.
-    __Precision__ is the ratio of true positives (tp) to all predicted positives (tp + fp).
-    __Recall__ is the ratio of true positives (tp) to all actual positives (tp + fn).</code></pre>
     - Formula
+    <pre><code>true positive (tp).
+    true negative (tn) 
+    false positive (fp) is where the tagger predicted a name, but there actually is no name in the gold standard.
+    false negative (fn) is where the gold standard has a name, but your tagger did not predict a name.
+    Precision is the ratio of true positives (tp) to all predicted positives (tp + fp).
+    Recall is the ratio of true positives (tp) to all actual positives (tp + fn).</code></pre>
     <pre><code>prec = tp / (tp + fp) = 1 - fp / (tp + fp)
     rec = tp / (tp + fn) = 1 - fn / (tp + fn)
     f = 2 * prec * rec / (prec + rec)</code></pre>
