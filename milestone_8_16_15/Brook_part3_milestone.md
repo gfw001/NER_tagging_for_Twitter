@@ -53,9 +53,9 @@
     F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
     (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)</code></pre>
     - __In current research, system typically get F-scores in the 0.6 range.__
-  + __F-score__
+  + Convertion from B/I/O to spans.
     - Our evaluation works at the __span__ level.
-    - Convertion from B/I/O to spans. `convert_bio_to_spans()` and `test_bio_conversion()` used at this step.
+    - `convert_bio_to_spans()` and `test_bio_conversion()` used at this step.
     - Format (label, startindex, endindex)
     <pre><code>def test_bio_conversion():
             spans = convert_bio_to_spans(["B"])
