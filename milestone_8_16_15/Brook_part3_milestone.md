@@ -163,10 +163,44 @@
 
 * Look at `mymodel` using `crfsuite dump mymodel`.
   + __Sample__
-  <pre><code>(0) word=ASU --> B: 0.447944
-  (0) word=Step --> I: 0.462402
-  (0) word=Gallery --> I: 0.464068
-  (0) word=socially --> O: 0.024724
-  (0) word=relevant --> O: 0.025255
-  (0) word=comic --> O: 0.026455
-  (0) word=designs --> O: 0.024946</code></pre>
+  <pre><code>FILEHEADER = {
+  magic: lCRF
+  size: 525968
+  type: FOMC
+  version: 100
+  num_features: 0
+  num_labels: 3
+  num_attrs: 7072
+  off_features: 0x30
+  off_labels: 0x23618
+  off_attrs: 0x23E8A
+  off_labelrefs: 0x6B82C
+  off_attrrefs: 0x6B878
+}
+
+LABELS = {
+      0: O
+      1: B
+      2: I
+}
+
+ATTRIBUTES = {
+      0: word=@paulwalk
+      1: word=It
+      2: word='s
+      3: word=the
+      4: word=view
+      5: word=from
+      6: word=where
+      7: word=I
+      8: word='m
+      9: word=living
+     10: word=for
+     11: word=two
+     12: word=weeks
+     13: word=.
+     14: word=Empire
+     15: word=State
+     16: word=Building
+     17: word==
+     18: word=ESB</code></pre>
