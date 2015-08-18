@@ -88,7 +88,7 @@
     f = 2 * prec * rec / (prec + rec)</code></pre>
       * __false positive (fp)__ is where the tagger predicted a name, but there actually is no name in the gold standard.
       * __false negative (fn)__ is where the gold standard has a name, but your tagger did not predict a name.
-      * __Precision__ is the ratio of __true positives (tp)__ to all predicted positives (tp + fp). 
+      * __Precision__ is the ratio of __true positives (tp)__ to all predicted positives (tp + fp). Precision goes down if you make lots of false positives.
       * __Recall (sensitivity)__ is the ratio of __true positives (tp)__ to all actual positives (tp + fn).
       * __Specificity__ is the ratio of __true negative (tn)__ to (tn + fp)
     - Code
