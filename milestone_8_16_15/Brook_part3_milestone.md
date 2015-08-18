@@ -49,8 +49,32 @@
   + Evaluate the pretags against the gold standard tags of the devset using `python tageval.py dev.txt predtags`
   + `tageval.py` used at this step, the evaluation script.
   + __Outputs__
-    - <pre><code>Span-level NER evaluation
+    <pre><code>Span-level NER evaluation
     F = 0.0362,  Prec = 0.7500 (12/16),  Rec = 0.0185 (12/647)
     (1000 sentences, 19378 tokens, 647 gold spans, 16 predicted spans)</code></pre>
     - __In current research, system typically get F-scores in the 0.6 range.__
   + __F-score__
+    - Our evaluation works at the __span__ level.
+    - Convertion from B/I/O to spans. `convert_bio_to_spans()` and `test_bio_conversion()` used at this step.
+    - __Code__ (label, startindex, endindex)
+    <pre><code>def test_bio_conversion():
+    spans = convert_bio_to_spans(["B"])
+    assert spans==[("",0,1)]
+    spans = convert_bio_to_spans(["B","I"])
+    assert spans==[("",0,2)]
+    spans = convert_bio_to_spans(["B","I","O"])
+    assert spans==[("",0,2)]
+    spans = convert_bio_to_spans(["O","B","I","O","O"])
+    assert spans==[("",1,3)]
+    spans = convert_bio_to_spans(["B","B"])
+    assert spans==[("",0,1), ("",1,2)]
+    spans = convert_bio_to_spans(["B","I","B"])
+    assert spans==[("",0,2), ("",2,3)]
+    spans = convert_bio_to_spans(["B-asdf","I-asdf","B"])
+    assert spans==[("asdf",0,2), ("",2,3)]
+    spans = convert_bio_to_spans(["B-asdf","I-difftype","B"])
+    assert spans==[("asdf",0,1), ("difftype",1,2), ("",2,3)]
+    spans = convert_bio_to_spans(["I","I"])
+    assert spans==[("",0,2)]
+    spans = convert_bio_to_spans(["B-a","I-b"])
+    assert spans==[("a",0,1), ("b",1,2)]</code></pre>
