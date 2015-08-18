@@ -2,7 +2,7 @@
 
 ## Run the starter code
 
-* Given train and dev sets, plain text files, `train.txt` and `dev.txt`.
+* Given train and dev sets, plain text files, [`train.txt`] (github.com/aritter/twitter_nlp) and [`dev.txt`] (from github.com/aritter/twitter_nlp).
   + __Sample__ (`train.txt`, `dev.txt`)
   <pre><code>Empire	B
   State	I
@@ -19,7 +19,9 @@
   (O) represent "Tokens that do not belong to a chunk".</code></pre> 
 
 * Features generation based on CRFsuite format. 
-  + Extract features using `simple_fe.py` for both the train and dev sets. `train.feats` and `dev.feats` created at this step.
+  + Extract features for both the train and dev sets. 
+  + `simple_fe.py` used at this step, a simple feature extractor designed to be used with CRFsuite.
+  + `train.feats` and `dev.feats` created at this step.
   + __Sample__ (`train.feats`, `dev.feats`)
   <pre><code>B word=Empire
   I	word=State
@@ -42,3 +44,8 @@
   O
   B
   O</code></pre>
+
+* Evaluation
+  + Evaluate the pretags against the gold standard tags of the devset using `python tageval.py dev.txt predtags`
+  + `tageval.py` used at this step, the evaluation script.
+  + 
