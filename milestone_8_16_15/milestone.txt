@@ -1,4 +1,4 @@
-#Big Pic of Milestone
+#milestone
 
 “It  O”
 | simple_fe.py train.txt   dev.txt- - - - - - -|
