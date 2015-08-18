@@ -1,8 +1,8 @@
 # Project milestone
 
 Note:
-train.txt -- training set (from github.com/aritter/twitter_nlp)
-dev.txt -- development set (from github.com/aritter/twitter_nlp)
++ train.txt -- training set (from https://github.com/aritter/twitter_nlp)
++ dev.txt -- development set (from https://github.com/aritter/twitter_nlp)
 
 ## Run the starter code
 
