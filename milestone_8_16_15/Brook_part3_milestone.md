@@ -2,7 +2,7 @@
 
 ## Run the starter code
 
-* Given train and dev sets, plain text files, [`train.txt`] (github.com/aritter/twitter_nlp) and [`dev.txt`] (from github.com/aritter/twitter_nlp).
+* Given train and dev sets, plain text files, [`train.txt`] (https://github.com/aritter/twitter_nlp) and [`dev.txt`] (https://github.com/aritter/twitter_nlp).
   + __Sample__ (`train.txt`, `dev.txt`)
   <pre><code>Empire	B
   State	I
