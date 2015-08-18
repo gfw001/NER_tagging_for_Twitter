@@ -26,7 +26,7 @@
   I	word=Building
   O	word==
   B	word=ESB
-  O	word=.
+  O	word=.</code></pre>
 
 * Training
   + Train a model on the training set `train.feats` using `crfsuite learn -m mymodel train.feats`.
