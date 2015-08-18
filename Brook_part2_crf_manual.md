@@ -18,4 +18,6 @@
         * [Training algorithms] (http://www.chokkan.org/software/crfsuite/manual.html#id491233) is __lbfgs: Limited-memory Broyden-Fletcher-Goldfarb-Shanno (L-BFGS) method__
     + [Tagging] (http://www.chokkan.org/software/crfsuite/manual.html#id493459)
         * Commands to tag a data using a CRF model, `crfsuite tag -m mymodel dev.feats > predtags` used in this project.
+    + [Model dump] (http://www.chokkan.org/software/crfsuite/manual.html#id493687)
+        * To dump a CRF model in plain-text format, enter the following command, `crfsuite dump`.
 
