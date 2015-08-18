@@ -58,7 +58,7 @@
     - Convertion from B/I/O to spans. `convert_bio_to_spans()` and `test_bio_conversion()` used at this step.
     - Format (label, startindex, endindex)
     <pre><code>def test_bio_conversion():
-               spans = convert_bio_to_spans(["B"])
+            spans = convert_bio_to_spans(["B"])
                    assert spans==[("",0,1)]
         spans = convert_bio_to_spans(["B","I"])
         assert spans==[("",0,2)]
