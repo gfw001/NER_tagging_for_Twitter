@@ -160,3 +160,13 @@
   O	throu	O
   O	...	O
   O	http://bit.ly/cLTnyl	O</code></pre>
+
+* Look at `mymodel` using `crfsuite dump mymodel`.
+  + __Sample__
+  <pre><code>(0) word=ASU --> B: 0.447944
+  (0) word=Step --> I: 0.462402
+  (0) word=Gallery --> I: 0.464068
+  (0) word=socially --> O: 0.024724
+  (0) word=relevant --> O: 0.025255
+  (0) word=comic --> O: 0.026455
+  (0) word=designs --> O: 0.024946</code></pre>
