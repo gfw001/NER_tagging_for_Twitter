@@ -134,3 +134,29 @@
 
 * Compare the tag predictions to the gold standard
   + put them side-by-side using `paste predtags dev.txt`
+  + __Sample__
+  <pre><code>B	Chicago	B
+  O	Weekend	O
+  O	Events	O
+  O	:	O
+  O	Lebowski	B
+  O	Fest	I
+  O	,	O
+  O	Dave	B
+  O	Matthews	I
+  O	,	O
+  O	Latin	O
+  O	Music	O
+  O	And	O
+  O	More	O
+  O	:	O
+  O	The	O
+  O	lively	O
+  O	weekend	O
+  O	(	O
+  O	well	O
+  O	,	O
+  O	Friday	O
+  O	throu	O
+  O	...	O
+  O	http://bit.ly/cLTnyl	O</code></pre>
