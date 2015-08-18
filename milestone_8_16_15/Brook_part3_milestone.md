@@ -3,7 +3,7 @@
 ## Run the starter code
 
 * Given train and dev sets, plain text files, `train.txt` and `dev.txt`.
-  + Sample (`train.txt`, `dev.txt`)
+  + __Sample__ (`train.txt`, `dev.txt`)
   <pre><code>Empire	B
   State	I
   Building	I
@@ -20,7 +20,7 @@
 
 * Extract features using `simple_fe.py` for both the train and dev sets. `train.feats` and `dev.feats` created at this step. 
   + Features generation based on CRFsuite format.
-  + Sample (`train.feats`, `dev.feats`)
+  + __Sample__ (`train.feats`, `dev.feats`)
   <pre><code>B word=Empire
   I	word=State
   I	word=Building
