@@ -22,7 +22,7 @@
   + Features generation based on CRFsuite format.
   + Sample (`train.feats`, `dev.feats`)
   <pre><code>B	word=Empire
-             I	word=State
+  I	word=State
   I	word=Building
   O	word==
   B	word=ESB
