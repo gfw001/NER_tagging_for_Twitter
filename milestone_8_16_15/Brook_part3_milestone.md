@@ -21,7 +21,7 @@
 * Extract features using `simple_fe.py` for both the train and dev sets. `train.feats` and `dev.feats` created at this step. 
   + Features generation based on CRFsuite format.
   + Sample (`train.feats`, `dev.feats`)
-  <pre><code>B	word=Empire
+  <pre><code>B word=Empire
   I	word=State
   I	word=Building
   O	word==
