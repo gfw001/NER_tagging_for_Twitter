@@ -80,3 +80,5 @@
             assert spans==[("a",0,1), ("b",1,2)]</code></pre>
     - __Sample__
     <pre><code>spans == [("",0,3), ("",4,5)]</code></pre>
+
+  + F-score
