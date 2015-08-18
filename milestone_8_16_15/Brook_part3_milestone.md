@@ -177,11 +177,11 @@
         off_labelrefs: 0x6B82C
         off_attrrefs: 0x6B878
       }
-      LABELS = {
+  LABELS = {
         0: O
         1: B
         2: I
-      }
+  }
   ATTRIBUTES = {
         0: word=@paulwalk
         1: word=It
@@ -204,7 +204,6 @@
        18: word=ESB
        ...
   }
-  
   TRANSITIONS = {
     (1) O --> O: 4.059304
     (1) O --> B: 2.451315
@@ -215,7 +214,6 @@
     (1) I --> B: -1.288914
     (1) I --> I: 3.140151
   }
-
   STATE_FEATURES = {
     ...
     (0) word=Soulja --> B: 0.919394
