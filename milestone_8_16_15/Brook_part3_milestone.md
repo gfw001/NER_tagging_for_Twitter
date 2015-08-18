@@ -22,6 +22,7 @@
   + Extract features for both the train and dev sets. 
   + `simple_fe.py` used at this step, a simple feature extractor designed to be used with CRFsuite.
   + `train.feats` and `dev.feats` created at this step.
+  + Conversion from the training/testing data to CRFsuite data
   + __Sample__ (`train.feats`, `dev.feats`)
   <pre><code>B word=Empire
   I	word=State
