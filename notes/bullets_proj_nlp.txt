@@ -1,4 +1,4 @@
-- - - - - - - — - - -
+- - - - - - - 隆陋 - - -
 milestone 
 general
 1. extract features for both the train and dev sets. (simple_fe.py)
@@ -13,13 +13,13 @@ use what software skill/programming language/tool/theory
 
 specific module (outputs data)
 1. f-score
-1’. training set (train.txt )
-2’. development set (dev.txt )
-3’. a simple feature extractor designed to be used with crfsuite (simple_fe.py )
-4’. the evaluation script (tageval.py)
+1隆炉. training set (train.txt )
+2隆炉. development set (dev.txt )
+3隆炉. a simple feature extractor designed to be used with crfsuite (simple_fe.py )
+4隆炉. the evaluation script (tageval.py)
 
 problems met?
-1. F = 0.0362, prec = 0.75 (12/16) ([prɪ'sɪʒ(ə)n]), rec = 0.0185 (12/647)
+1. F = 0.0362, prec = 0.75 (12/16) ([pr聛0庐1's聛0庐1聛0虏1(聛0卢5)n]), rec = 0.0185 (12/647)
 there are 647 gold spans, we only found 12 of them, which is the main reason why we have such small F-score.
 2. we get good predictions on the words or phrase which appeared in train.txt. This is reasonable considering that our codes right now only take the words around one certain word to be its attributes, and we assign them weights regarding the distance. But by doing this way it is hard to predict for unseen word in a new file. So we need to add new attributes to analyze structure of the sentences.
 3. we only take word and relative position into consideration and this makes prediction bad.
@@ -58,8 +58,9 @@ the approaches I used features in NLP systems, and I found them some helpful and
 1) first 1, 2, 3 characters and the last 1, 2, 3 characters
 2) helpful
 3. shape features 
-1) ”Twitter" to "Aa" and "Twitter3" to "AaD".
-2) helpful4. positional offset versions of above. 
+1) 隆卤Twitter" to "Aa" and "Twitter3" to "AaD".
+2) helpful
+4. positional offset versions of above. 
 1) whether it holds for the word before or after
 2) helpful
 
@@ -82,7 +83,7 @@ the approaches I used features in NLP systems, and I found them some helpful and
 1. we used the IOB notation to represent a chunk (a span of tokens) with labels.
 B represents a begin of a chunk, I represents an inside of a chunk.
 e.g. Empire State Building = ESB.
-tokens: ‘Empire’, ‘State’, ‘Building’, ‘=‘, ‘ESB’, ‘.’.
+tokens: 隆庐Empire隆炉, 隆庐State隆炉, 隆庐Building隆炉, 隆庐=隆庐, 隆庐ESB隆炉, 隆庐.隆炉.
 labels: B, I, I, O, B, O.
 spans: (B, I, I), (O), (B), (O)
 2. crfsuite is a software package that does first-order CRF sequence tagging. 
@@ -102,7 +103,7 @@ To achieve this goal,
 + we used two txt files which contains a series of words, and chunk labels as our training set and development set, 
 
 e.g. Empire State Building = ESB.
-tokens: ‘Empire’, ‘State’, ‘Building’, ‘=‘, ‘ESB’, ‘.’. dot
+tokens: 隆庐Empire隆炉, 隆庐State隆炉, 隆庐Building隆炉, 隆庐=隆庐, 隆庐ESB隆炉, 隆庐.隆炉. dot
 labels: B, I, I, O, B, O.
 
 + we designed a Python script as our feature extractor to extract characteristics of words in corpus, 
@@ -117,4 +118,4 @@ These features are helpful. Of course, we also tried external lexical resources 
 + we used crfsuite this software package as our modeling tool and used f-score as our evaluation standard. 
 + we also submitted our development set predictions to the Kaggle to test how our system does on new data. 
 
-In fact, the f-score is only 0.0036 (zero point double zero three six) at start, which is  very low. And we went to figure it out. After reading the outputs of evaluation, we found our precision was twelve out of sixteenth, recall was twelve out of six hundred forty seventh, there are 647 gold spans, we only found 12 of them, which was the main reason why we have such small f-score. We also found we had a good prediction on words and phrases which appeared in training set, but hard to predict correctly for unseen word in a new corpus. That was because we only took the word and its relative position into consideration. So we paid most of our effort to enrich feature extractor. 
+In fact, the f-score is only 0.0036 (zero point double zero three six) at start, which is  very low. And we went to figure it out. so I discuss this problem with my partner. we decided to review the outputs of evaluation. After reading the outputs of evaluation, we found our precision was twelve out of sixteenth, recall was twelve out of six hundred forty seventh, there are 647 gold spans, we only found 12 of them, which was the main reason why we have such small f-score. We also found we had a good prediction on words and phrases which appeared in training set, but hard to predict correctly for unseen word in a new corpus. That was because we only took the word and its relative position into consideration. So we paid most of our effort to enrich feature extractor. 
