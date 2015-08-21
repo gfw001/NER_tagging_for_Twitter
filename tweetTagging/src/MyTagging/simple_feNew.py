@@ -4,7 +4,6 @@ import pprint
 import string
 import json
 import urllib
-import nlpk
 sys.path.append('/Users/Eamon___/Documents/workspace/tweetTagging/src/MyTagging/ark-tweet-nlp-0.3.2')
 import CMUTweetTagger
 
